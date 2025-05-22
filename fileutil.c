@@ -56,3 +56,14 @@ char *substringSearch2D(char *target, char (*arr)[COLS], int size) {
 void free2D(char (*arr)[COLS]) {
     free(arr);
 }
+
+// Added function for crack3
+// ExactMatchSearch2D
+char *exactMatchSearch2D(char *target, char (*arr)[COLS], int size) {
+    for (int i = 0; i < size; i++) {
+        if (strcmp(arr[i], target) == 0) {
+            return arr[i];  // Found exact match
+        }
+    }
+    return NULL;  // Not found
+}
